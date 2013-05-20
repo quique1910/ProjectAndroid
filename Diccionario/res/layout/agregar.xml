@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
+ 				
+    <EditText android:id="@+id/et_palabra"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dip"
+              android:singleLine="true"
+              android:hint="Ingrese Palabra"
+              android:inputType="text"
+              android:imeOptions="actionNext"/>
+ 
+    <EditText android:id="@+id/et_traduccion"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dip"
+              android:singleLine="true"
+              android:hint="Ingrese Traduccion"
+              android:inputType="text"
+              android:imeOptions="actionDone"/>
+    <EditText android:id="@+id/et_descripcion"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="5dip"
+              android:hint="Ingrese descripcion"
+              android:inputType="textMultiLine"
+              android:imeOptions="actionDone"/>
+ 
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Guardar"
+            android:onClick="onClickAdd"/>
+ 
+</LinearLayout>
