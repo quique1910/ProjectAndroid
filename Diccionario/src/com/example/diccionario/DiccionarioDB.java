@@ -14,9 +14,8 @@ public class DiccionarioDB {
     private static final int DATABASE_VERSION = 2;
     private static final String DATABASE_NAME = "DIC.db";
  
-    // table configuration
-    private static final String TABLE_NAME = "Tpalabras";         // Table name
-    private static final String TABLE_COLUMN_ID = "_id";     // a column named "_id" is required for cursor
+    private static final String TABLE_NAME = "Tpalabras";        
+    private static final String TABLE_COLUMN_ID = "_id";    
     private static final String TABLE_COLUMN_PAL = "dic_palabra";
     private static final String TABLE_COLUMN_TRA = "dic_traduccion";
     private static final String TABLE_COLUMN_DES = "dic_descripcion";
@@ -54,7 +53,7 @@ public class DiccionarioDB {
     	return(database.rawQuery(sql, null));
     }
     
-	public int actualizar(int id, String palabra, String traduccion,String descripcion) {
+	public int update(int id, String palabra, String traduccion,String descripcion) {
 		int filasAfectadas = 0;
 		if (database != null) {
 			ContentValues cv = new ContentValues();

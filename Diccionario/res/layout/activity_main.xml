@@ -9,13 +9,26 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <Button
-        android:layout_width="match_parent"
+    <LinearLayout 
+		android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:onClick="onClickEnterData"
-        android:text="Agregar" />
-
+        android:orientation="horizontal" >
+        <Button
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:onClick="onClickEnterData"
+	        android:text="Agregar" />
+	    
+		<Button
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:onClick="onClickEnterData"
+	        android:text="Modificar" />
+        </LinearLayout>
+    
+	
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +36,7 @@
 
         <EditText
             android:id="@+id/ET_entrada"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_margin="5dp"
             android:hint="Escribe aqui"
@@ -39,13 +52,13 @@
 
         <Button
             android:id="@+id/buscar"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:text="Buscar" />
         <Button
             android:id="@+id/otros"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"
             android:text="Otros" />
@@ -54,6 +67,6 @@
     <ListView
         android:id="@+id/list_data"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="300dp" />
 
 </LinearLayout>

@@ -106,7 +106,6 @@ public class MainActivity extends Activity {
 	        		startActivity(i);
 	            }
 	        });
-
 		}
 	};
     
@@ -115,7 +114,8 @@ public class MainActivity extends Activity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == ENTER_DATA_REQUEST_CODE && resultCode == RESULT_OK) {
-        	dicDB.insertData(data.getExtras().getString("tag_pal"), data.getExtras().getString("tag_tra"), data.getExtras().getString("tag_des"));
+        	dicDB.insertData(data.getExtras().getString("tag_pal"), data.getExtras().getString("tag_tra"), 
+        			data.getExtras().getString("tag_des"));
             customAdapter.changeCursor(dicDB.getAllData());
         }
     }
